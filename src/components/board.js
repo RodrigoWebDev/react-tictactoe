@@ -41,6 +41,18 @@ class Board extends React.Component {
     } else {
       status = `Turn: ${this.state.xIsNext ? 'X' : 'O'}`
     }
+    let squares = this.state.squares;
+
+    check(squares);
+
+    function check(arr) {
+      for(var i=0; i<arr.length; i++){
+        if(typeof arr[i] != "string" && calculateWinner === null) {
+          return false;
+        }
+      }
+      status = "No winner"
+    }
 
     return (
       <div>
