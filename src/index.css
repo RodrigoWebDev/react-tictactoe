@@ -8,6 +8,30 @@ ul {
   padding-left: 30px;
 }
 
+.flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.margin-top-32px {
+  margin-top: 16px;
+}
+
+.margin-right-40px {
+  margin-right: 40px;
+}
+
+.padding-16px-52px {
+  padding: 16px 52px;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
 .board-row:after {
   clear: both;
   content: "";
@@ -22,15 +46,15 @@ ul {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 34px;
   font-weight: bold;
   line-height: 34px;
-  height: 50px;
+  height: 70px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 50px;
+  width: 70px;
   font-family: "Pacifico", cursive;
 }
 
@@ -51,53 +75,52 @@ ul {
 
 .game__title {
   text-align: center;
-  margin-bottom: 60px;
 }
 
 .game-info {
   margin-left: 20px;
 }
 
-.board-row:nth-child(2) button:nth-child(1) {
+.board-row:nth-child(1) button:nth-child(1) {
   border-top: none;
   border-left: none;
 }
 
-.board-row:nth-child(2) button:nth-child(2) {
+.board-row:nth-child(1) button:nth-child(2) {
   border-top: none;
+}
+
+.board-row:nth-child(1) button:nth-child(3) {
+  border-top: none;
+  border-right: none;
+}
+
+.board-row:nth-child(2) button:nth-child(1) {
+  border-left: none;
 }
 
 .board-row:nth-child(2) button:nth-child(3) {
-  border-top: none;
   border-right: none;
+}
+
+.board-row:nth-child(2) button:nth-child(1) {
+  border-bottom: none;
+  border-left: none;
 }
 
 .board-row:nth-child(3) button:nth-child(1) {
+  border-bottom: none;
   border-left: none;
+}
+
+.board-row:nth-child(3) button:nth-child(2) {
+  border-bottom: none;
+  border-right: none;
 }
 
 .board-row:nth-child(3) button:nth-child(3) {
-  border-right: none;
-}
-
-.board-row:nth-child(4) button:nth-child(1) {
-  border-bottom: none;
-  border-left: none;
-}
-
-.board-row:nth-child(4) button:nth-child(2) {
-  border-bottom: none;
-}
-
-.board-row:nth-child(4) button:nth-child(3) {
   border-bottom: none;
   border-right: none;
-}
-
-.score {
-  position: absolute;
-  top: 16px;
-  left: 32px;
 }
 
 @media (min-width: 576px) {

@@ -17,13 +17,8 @@ const Game = () => {
 
   return (
     <div className="game">
-      <h1 className="game__title">Tic Tac Toe Game</h1>
+      <h1 className="game__title">Tic-Tac-Toe</h1>
       <div className="game-board">
-        <div className="score">
-          <p>Score:</p>
-          <p>X : {xScore}</p>
-          <p>O : {oScore}</p>
-        </div>
         <Board
           gameOver={gameOver}
           setGameOver={setGameOver}
@@ -38,8 +33,21 @@ const Game = () => {
           oScore={oScore}
           setOScore={setOScore}
         />
-        {gameOver && <button onClick={() => playAgain()}>Play again</button>}
       </div>
+      <div className="flex justify-content-center margin-top-32px">
+        <div className="margin-right-40px">Player (X): {xScore}</div>
+        <div>Player (O): {oScore}</div>
+      </div>
+      <div className={`${gameOver ? "" : "visibility-hidden"} margin-top-32px`}>
+        {status || "status"}
+      </div>
+      {gameOver && (
+        <div className="margin-top-32px">
+          <button onClick={() => playAgain()} className="padding-16px-52px">
+            Play again
+          </button>
+        </div>
+      )}
     </div>
   );
 };
